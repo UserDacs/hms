@@ -56,12 +56,12 @@
             {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light form-control' : 'bg-white form-control'),'id' => 'doctorBirthDate','autocomplete' => 'off']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    {{--<div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('blood_group',__('messages.user.blood_group').(':'), ['class' => 'form-label']) }}
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'doctorBloodGroup','placeholder'=>'Select Blood Group', ]) }}
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('gender',__('messages.user.gender').(':'), ['class' => 'form-label']) }}
@@ -167,7 +167,7 @@
         </div>
     </div>
 </div>
-<hr>
+{{--<hr>
 <div class="row mt-3 mb-5">
     <div class="col-md-12 mb-3">
         <h5>{{ __('messages.setting.social_details') }}</h5>
@@ -197,7 +197,7 @@
         {{ Form::text('linkedIn_url', null, ['class' => 'form-control linkedInUrl','id'=>'doctorLinkedInUrl', 'onkeypress' => 'return avoidSpace(event);']) }}
     </div>
 
-</div>
+</div>--}}
 <div class="d-flex justify-content-end">
     {{ Form::submit(__('messages.common.save'), ['class' => 'btn btn-primary me-2']) }}
     <a href="{{ route('doctors.index') }}"

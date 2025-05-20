@@ -73,7 +73,7 @@
             <div class="container">
                 <div class="col-lg-6 text-center mx-auto">
                     <h6 class="text-primary pb-2">{{ __('messages.web_home.easy_solutions') }}</h6>
-                    <h2 class="mb-4 pb-4">{{ __('messages.web_home.4_easy_step_and_get_the_world_best_treatment') }}</h2>
+                    {{--<h2 class="mb-4 pb-4">{{ __('messages.web_home.4_easy_step_and_get_the_world_best_treatment') }}</h2>--}}
                 </div>
                 <div class="easy-solution-cards">
                     <div class="row justify-content-between">
@@ -137,7 +137,7 @@
         <!-- end easy-solution section -->
 
         <!--start about-section -->
-        <section class="about-section p-t-200 p-b-120">
+        {{--<section class="about-section p-t-200 p-b-120">
             <div class="container">
                 <div class="row align-items-stretch flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 col-md-12">
@@ -187,11 +187,11 @@
 
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- end about-section -->
 
         <!-- start service-section -->
-        <section class="service-section p-t-120 p-b-100 bg-gray">
+        {{--<section class="service-section p-t-120 p-b-100 bg-gray">
             <div class="container">
                 <div class="col-lg-6 text-center mx-auto">
                     <h6 class="text-primary mb-3">{{ __('messages.web_home.our_services') }}</h6>
@@ -216,7 +216,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- end service-section -->
 
         <!-- start quality-section -->
@@ -265,13 +265,12 @@
         <!-- end quality-section -->
 
         <!-- start professional-doctors section -->
-        <section class="professional-doctors-section shape-rectangle position-relative">
+        {{--<section class="professional-doctors-section shape-rectangle position-relative">
             <div class="container">
                 <div class="col-lg-6 text-center mx-auto">
                     <h6 class="text-primary mb-3">{{ __('messages.web_home.professional_doctors') }}</h6>
                     <h2 class="mb-5 pb-xl-3">{{ __('messages.web_home.we_are_experienced_healthcare_professionals') }}</h2>
-                </div>
-
+                </div>s
                 <div class="slick-slider">
                     @foreach($doctorAppointments as $doctor)
                         <div class="slide text-center">
@@ -284,12 +283,11 @@
                     @endforeach
                 </div>
             </div>
-
-        </section>
+        </section>--}}
         <!-- end professional-doctors section -->
 
         <!-- start testimonial-section -->
-        <section class="testimonial-section p-t-120">
+        {{--<section class="testimonial-section p-t-120">
             <div class="container">
                 <div class="col-lg-6 text-center mx-auto">
                     <h6 class="text-primary pb-2">{{ __('messages.web_home.our_testimonials') }}</h6>
@@ -327,7 +325,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- end testimonial-section -->
     </div>
 @endsection

@@ -59,12 +59,12 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    {{--<div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'patientBloodGroup', 'placeholder' => 'Select Blood Group', 'data-control' => 'select2', 'tabindex' => "9"]) }}
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('password', __('messages.user.password').':', ['class' => 'form-label']) }}<span class="required"></span>

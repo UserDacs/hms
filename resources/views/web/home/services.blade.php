@@ -3,7 +3,7 @@
     {{ __('messages.services') }}
 @endsection
 @section('content')
-    <div class="services-page">
+    {{--<div class="services-page">
         <!-- start hero section -->
         <section class="hero-section position-relative p-t-60 border-bottom-right-rounded border-bottom-left-rounded bg-gray overflow-hidden">
             <div class="container">
@@ -67,5 +67,5 @@
             </div>
         </section>
         <!-- end service-section -->
-    </div>
+    </div>--}}
 @endsection

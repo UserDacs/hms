@@ -7,7 +7,7 @@
         <div class="row align-items-center">
             <div class="col-lg-1 col-4">
                 <a href="{{ url('/') }}" class="header-logo">
-                    <img src="{{ getLogoUrl() }}" alt="Infy HMS" class="img-fluid" />
+                    <img src="{{ getLogoUrl() }}" alt="Infy BIS" class="img-fluid" />
                 </a>
             </div>
             <div class="col-lg-11 col-8 ps-0">
@@ -25,28 +25,28 @@
                                 </a>
                             </li>
                             
-                            <li class="nav-item">
+                            {{--<li class="nav-item">
                                 <a class="nav-link {{ Request::is('our-services') ? 'active' : '' }}" href="{{ route('our-services') }}">
                                     {{ __('messages.web_home.services') }}
                                 </a>
-                            </li>
+                            </li>--}}
                             
-                            <li class="nav-item">
+                            {{--<li class="nav-item">
                                 <a href="{{ route('our-doctors') }}"
                                    class="nav-link {{ Request::is('our-doctors') ? 'active' : '' }}">{{ __('messages.web_home.doctors') }}</a>
-                            </li>
+                            </li>--}}
 
-                            <li class="nav-item">
+                            {{--<li class="nav-item">
                                 <a href="{{ route('aboutUs') }}"
                                    class="nav-link {{ Request::is('about-us') ? 'active' : '' }}">{{ __('messages.web_menu.about') }}</a>
-                            </li>
+                            </li>--}}
 
-                            <li class="nav-item">
+                            {{--<li class="nav-item">
                                 <a href="{{ route('contact') }}"
                                    class="nav-link {{ Request::is('contact-us') ? 'active' : '' }}">{{ __('messages.web_home.contact') }}</a>
-                            </li>
+                            </li>--}}
 
-                            <li class="nav-item">
+                            {{--<li class="nav-item">
                                 <a class="nav-link" href="#" {{ Request::is('terms-of-service', 'privacy-policy') ? 'active' : '' }}>
                                     {{ __('messages.web_menu.our_features') }}
                                     <i class="fa-solid fa-angle-down ms-1"></i>
@@ -78,11 +78,11 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>--}}
                             <li class="nav-item">
-{{--                                <a class="nav-link" href="javascript:void(0)"> {{getCurrentLanguageName()}}</a>--}}
-                                <a class="nav-link" href="javascript:void(0)"> {{ __('messages.language.'.getCurrentLanguageName()) }}</a>
-                                <ul class="nav submenu language-menu">
+                                {{--<a class="nav-link" href="javascript:void(0)"> {{getCurrentLanguageName()}}</a>--}}
+                                <div class="nav-link" href="javascript:void(0)"> {{ __('messages.language.'.getCurrentLanguageName()) }}</div>
+                                {{--<ul class="nav submenu language-menu">
                                     @foreach(getLanguages() as $key => $value)
                                         @foreach(\App\Models\User::LANGUAGES_IMAGE as $imageKey=> $imageValue)
                                             @if($imageKey == $key)
@@ -95,7 +95,7 @@
                                             @endif
                                         @endforeach
                                     @endforeach
-                                </ul>
+                                </ul>--}}
                             </li>
                         </ul>
                         <div class="text-xl-end header-btn-grp ms-xl-3">

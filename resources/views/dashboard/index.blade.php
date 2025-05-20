@@ -17,7 +17,7 @@
                     <div class="row">
                         @if($modules['Invoices'] == true)
                             {{-- Invoices Widget --}}
-                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
+                            {{--<div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a class="text-decoration-none" href="{{ route('invoices.index') }}">
                                     <div class="bg-primary shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-cyan-300 widget-icon rounded-10 me-2 d-flex align-items-center justify-content-center">
@@ -29,11 +29,11 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            </div>--}}
                         @endif
                         @if($modules['Bills'])
                             {{-- Bills Widget --}}
-                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
+                            {{--<div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('bills.index') }}" class="text-decoration-none">
                                     <div class="bg-success shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-green-300 widget-icon rounded-10 me-2  d-flex align-items-center justify-content-center">
@@ -45,11 +45,11 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            </div>--}}
                         @endif
                         @if($modules['Payments'] == true)
                             {{-- Payments Widget --}}
-                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
+                            {{--<div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('payments.index') }}" class="text-decoration-none">
                                     <div class="bg-info shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-blue-300 widget-icon rounded-10 me-2 d-flex align-items-center justify-content-center">
@@ -61,11 +61,11 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            </div>--}}
                         @endif
                         @if($modules['Advance Payments'] == true)
                             {{-- Advance Payments Widget --}}
-                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
+                            {{--<div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('advanced-payments.index') }}" class="text-decoration-none">
                                     <div class="bg-warning shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-yellow-300 widget-icon rounded-10 me-2 d-flex align-items-center justify-content-center">
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            </div>--}}
                         @endif
                         @if($modules['Doctors'] == true)
                             {{-- Doctors Widget --}}
@@ -145,7 +145,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-xxl-7 col-12 mb-7 mb-xxl-0">
+                {{--<div class="col-xxl-7 col-12 mb-7 mb-xxl-0">
                     <div class="card">
                         <div class="card-header pb-0 px-10">
                             <h3 class="mb-0">
@@ -225,7 +225,7 @@
                             @endif
                         </div>
                     </div>
-                </div>
+                </div>--}}
             </div>
             {{-- Income & Expense Chart--}}
             {{--            <div class="row">--}}

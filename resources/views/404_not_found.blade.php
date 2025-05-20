@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="{{config('app.name')}}">
 
-    <meta name="keywords" content="Hospital Management System"/>
+    <meta name="keywords" content="Barangay Information System"/>
 
-    <meta name="description" content="Hospital Management System | HMS"/>
+    <meta name="description" content="Barangay Information System | BIS"/>
     <meta name="author" content="hms.infyom.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>HMS Log Viewer | {{getAppName()}}</title>
+    <title>BIS Log Viewer | {{getAppName()}}</title>
     <meta name="description" content="Hospital management system">
     <meta name="keyword" content="hospital,doctor,patient,fever,MD,MS,MBBS">
     <link href="{{ asset('css/pages.css') }}" rel="stylesheet" type="text/css"/>

@@ -3,7 +3,7 @@
     $settingValue = getSettingValue();
 @endphp
 
-<footer class="footer">
+{{--<footer class="footer">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-4 mb-lg-0 mb-4">
@@ -80,5 +80,5 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>--}}
 <!-- end footer section -->

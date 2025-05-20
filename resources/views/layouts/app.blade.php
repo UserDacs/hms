@@ -45,7 +45,7 @@
     
     @yield('page_scripts')
     <script>
-        {{--let defaultImage = "{{ asset('assets/img/avatar.png') }}";--}}
+        let defaultImage = "{{ asset('assets/img/avatar.png') }}";
         // const defaultImageUrl = '';
         (function ($) {
             $.fn.button = function (action) {
