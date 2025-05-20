@@ -22,9 +22,9 @@ class AdminUserSeeder extends Seeder
         $input = [
             'first_name' => 'Super',
             'last_name' => 'Admin',
-            'email' => 'admin@hms.com',
+            'email' => 'bis@gmail.com',
             'password' => Hash::make('123456789'),
-            'phone' => '7878454512',
+            'phone' => '09123456789',
             'gender' => 1,
             'dob' => '1994-12-12',
             'blood_group' => 'B+',
