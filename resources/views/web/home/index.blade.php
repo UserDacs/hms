@@ -34,7 +34,7 @@
         <!-- end hero section -->
 
         <!--start book-appointment section-->
-        <section class="appointment-section">
+        {{--<section class="appointment-section">
             <div class="container">
                 <div class="book-appintment position-relative br-2 bg-white">
                     <form action="{{ route('appointment.post') }}" method="POST" turbo:load>
@@ -65,7 +65,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!--end book-appointment section-->
 
         <!-- start easy-solution section -->
@@ -220,7 +220,7 @@
         <!-- end service-section -->
 
         <!-- start quality-section -->
-        <section class="quality-section p-t-120 p-b-200">
+        {{--<section class="quality-section p-t-120 p-b-200">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
@@ -261,7 +261,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>--}}
         <!-- end quality-section -->
 
         <!-- start professional-doctors section -->

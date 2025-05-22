@@ -70,7 +70,7 @@
                 </div>
             </div>
             <!-- Currency Field -->
-            <div class="col-md-6">
+            {{--<div class="col-md-6">
                 <div class="form-group mb-5">
                     {{ Form::label('current_currency', __('messages.setting.currency').':', ['class' => 'form-label']) }}
                     <span class="required"></span>
@@ -94,7 +94,7 @@
                     <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
                     <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
                 </div>
-            </div>
+            </div>--}}
         </div>
         <div class="row">
             <!-- About us Field -->
@@ -164,7 +164,7 @@
             </div>
         </div>
         
-    <hr>
+    {{--<hr>
     <div class="row">
         <div class="col-md-12 mb-3">
             <h5>{{ __('messages.setting.social_details') }}</h5>
@@ -199,7 +199,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
     <div class="clearfix"></div>
     <!-- Submit Field -->
         <div class="d-flex justify-content-end">

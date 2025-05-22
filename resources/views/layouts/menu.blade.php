@@ -50,7 +50,7 @@
 @endmodule--}}
 
 {{--Appointments--}}
-@module('Appointments',$modules)
+{{--@module('Appointments',$modules)
 <li class="nav-item {{ Request::is('appointment*') ? 'active' : '' }}">
     <a class="nav-link  d-flex align-items-center py-3"
        href="{{ route('appointments.index') }}">
@@ -58,7 +58,7 @@
         <span class="aside-menu-title">{{ __('messages.appointments') }}</span>
     </a>
 </li>
-@endmodule
+@endmodule--}}
 
 {{-- Billing --}}
 {{--
@@ -215,7 +215,7 @@ $frontOfficeMGT = getMenuLinks(\App\Models\User::MAIN_FRONT_OFFICE)
 @endif
 
 {{-- Front settings --}}
-<li class="nav-item {{ Request::is('front-settings*','notice-boards*','testimonials*', 'front-cms-services*') ? 'active' : '' }}">
+{{--<li class="nav-item {{ Request::is('front-settings*','notice-boards*','testimonials*', 'front-cms-services*') ? 'active' : '' }}">
     <a class="nav-link  d-flex align-items-center py-3"
        href="{{ route('front.settings.index') }}">
                                                                         <span class="aside-menu-icon pe-3 pe-3"><i
@@ -226,7 +226,7 @@ $frontOfficeMGT = getMenuLinks(\App\Models\User::MAIN_FRONT_OFFICE)
         <span class="d-none">{{ __('messages.cms') }}</span>
         <span class="d-none">{{ __('messages.front_cms_services') }}</span>
     </a>
-</li>
+</li>--}}
 
 {{-- Hospital Charges --}}
 <?php
@@ -403,7 +403,7 @@ $pathologyMgt = getMenuLinks(\App\Models\User::MAIN_PATHOLOGY)
 @endmodule
 
 {{-- Hospital Activities dropdown --}}
-<?php
+{{--<?php
 $reportMgt = getMenuLinks(\App\Models\User::MAIN_REPORT)
 ?>
 @if ($reportMgt)
@@ -418,7 +418,7 @@ $reportMgt = getMenuLinks(\App\Models\User::MAIN_REPORT)
             <span class="d-none">{{__('messages.operation_reports')}}</span>
         </a>
     </li>
-@endif
+@endif--}}
 
 {{-- Radiology --}}
 <?php

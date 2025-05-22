@@ -47,9 +47,9 @@ class MedicineBrandTable extends LivewireTableComponent
             Column::make(__('messages.user.email'), 'email')
                 ->view('brands.templates.columns.email')
                 ->sortable(),
-            Column::make(__('messages.user.phone'), 'phone')
-                ->view('brands.templates.columns.phone')
-                ->sortable(),
+            // Column::make(__('messages.user.phone'), 'phone')
+            //     ->view('brands.templates.columns.phone')
+            //     ->sortable(),
             Column::make(__('messages.common.action'), 'id')->view('brands.action'),
         ];
     }

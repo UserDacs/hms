@@ -11,10 +11,10 @@
                    class="dropdown-item  px-5">{{ __('messages.doctor.new_doctor') }}</a>
             @endif
         </li>
-        <li>
+        {{--<li>
             <a href="{{ route('doctors.excel') }}" data-turbo="false"
                class="dropdown-item  px-5">{{ __('messages.common.export_to_excel') }}</a>
-        </li>
+        </li>--}}
     </ul>
 </div>
 

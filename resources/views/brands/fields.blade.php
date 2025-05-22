@@ -6,7 +6,7 @@
             {!! Form::text('name', null, ['id'=>'brandName','class' => 'form-control','required']) !!}
         </div>
     </div>
-    <div class="col-md-6">
+    {{--<div class="col-md-6">
         <div class="form-group mb-5">
             {!! Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) !!}
             <br>
@@ -16,7 +16,7 @@
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-6">
         <div class="form-group mb-5">
             {!! Form::label('email', __('messages.user.email').':', ['class' => 'form-label']) !!}

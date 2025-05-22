@@ -21,10 +21,10 @@
             {{ Form::select('department_id', $role, null, ['class' => 'form-select fw-bold', 'required', 'id' => 'userRole', 'placeholder' => 'Select Role', 'data-control' => 'select2']) }}
         </div>
     @endif
-    <div class="col-md-6">
+    {{--<div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('phone',__('messages.visitor.phone').(':'), ['class' => 'form-label']) }}
-            <span class="required"></span>
+            <span class=""></span>
             <br>
             {{ Form::tel('phone', $user->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber','id' => 'userPhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")', 'tabindex' => '5']) }}
             {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
@@ -32,7 +32,7 @@
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>
+    </div>--}}
     <div class="col-lg-6 mb-5">
         {{ Form::label('dob',__('messages.user.dob').':', ['class' => 'form-label']) }}
         {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light form-control' : 'bg-white form-control'), 'id' => 'userDob', 'autocomplete' => 'off', 'tabindex' => '10']) }}
@@ -78,7 +78,7 @@
         </div>
 @endif
 <!-- Facebook URL Field -->
-    <div class="col-lg-6 mb-5">
+    {{--<div class="col-lg-6 mb-5">
         {{ Form::label('facebook_url', __('messages.facebook_url').':', ['class' => 'form-label']) }}
         {{ Form::text('facebook_url', null, ['class' => 'form-control','id'=>'userFacebookUrl', 'onkeypress' => 'return avoidSpace(event);']) }}
     </div>
@@ -97,7 +97,7 @@
     <div class="col-lg-6 mb-5">
         {{ Form::label('linkedIn_url', __('messages.linkedIn_url').':', ['class' => 'form-label']) }}
         {{ Form::text('linkedIn_url', null, ['class' => 'form-control','id'=>'userLinkedInUrl', 'onkeypress' => 'return avoidSpace(event);']) }}
-    </div>
+    </div>--}}
     <div class="form-group col-md-4 mb-5">
         <div class="row2" io-image-input="true">
             {{ Form::label('image',__('messages.common.profile').(':'), ['class' => 'form-label']) }}

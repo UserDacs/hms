@@ -58,7 +58,7 @@
     </div>
 
     <!-- Currency Field -->
-    <div class="form-group col-sm-6">
+    {{--<div class="form-group col-sm-6">
         {{ Form::label('current_currency', __('messages.setting.currency').':') }}<span class="required">*</span>
         <select id="settingCurrencyType" data-show-content="true" class="form-select"
                 name="current_currency">
@@ -68,7 +68,7 @@
                 </option>
             @endforeach
         </select>
-    </div>
+    </div>--}}
 </div>
 <div class="row">
     <!-- App Logo Field -->

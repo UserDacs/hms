@@ -75,16 +75,16 @@ class SettingRepository extends BaseRepository
         }
 
         $input['hospital_phone'] = preparePhoneNumber($input, 'hospital_phone');
-        $country_code = Setting::where('key', '=', 'country_code')->first();
-        if ($country_code->value == $input['country_code']) {
-            $input['country_code'] = $country_code->value;
-        } else {
-            $input['country_code'] = '+'.$input['country_code'];
-        }
+        // $country_code = Setting::where('key', '=', 'country_code')->first();
+        // if ($country_code->value == $input['country_code']) {
+        //     $input['country_code'] = $country_code->value;
+        // } else {
+        //     $input['country_code'] = '+'.$input['country_code'];
+        // }
 
         $settingInputArray = Arr::only($input, [
             'app_name', 'company_name', 'hospital_email', 'hospital_phone', 'hospital_from_day', 'hospital_from_time',
-            'hospital_address', 'current_currency', 'facebook_url', 'twitter_url', 'instagram_url', 'linkedIn_url', 'about_us', 'country_code', 'country_name'
+            'hospital_address', 'about_us', 'country_name'
         ]);
         foreach ($settingInputArray as $key => $value) {
             Setting::where('key', '=', $key)->first()->update(['value' => $value]);

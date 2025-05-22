@@ -51,9 +51,9 @@ class AdminTable extends LivewireTableComponent
                 ->view('admins.columns.admin')
                 ->searchable()
                 ->sortable(),
-            Column::make(__('messages.user.phone'), 'phone')
-                ->view('admins.columns.phone')
-                ->sortable()->searchable(),
+            // Column::make(__('messages.user.phone'), 'phone')
+            //     ->view('admins.columns.phone')
+            //     ->sortable()->searchable(),
             Column::make(__('messages.common.status'), 'status')
                 ->view('admins.columns.status')
                 ->searchable(),

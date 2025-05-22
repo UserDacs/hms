@@ -367,12 +367,12 @@
 @endrole
 @role('Admin')
 @module('Prescriptions',$modules)
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('doctors*','doctor-departments*','schedules*','prescriptions*')) ? 'd-none' : '' }}">
+{{--<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('doctors*','doctor-departments*','schedules*','prescriptions*')) ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('prescriptions*') ? 'active' : '' }}"
        href="{{ route('prescriptions.index') }}">
         {{ __('messages.prescriptions') }}
     </a>
-</li>
+</li>--}}
 @endmodule
 @endrole
 @endrole
@@ -750,18 +750,18 @@
         {{ __('messages.hospital_schedule') }}
     </a>
 </li>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0  {{ (Request::is('settings*', 'currency-settings*', 'hospital-schedules')) ? '' : 'd-none' }} ">
+{{--<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0  {{ (Request::is('settings*', 'currency-settings*', 'hospital-schedules')) ? '' : 'd-none' }} ">
     <a class="nav-link p-0 {{ (isset($sectionName) && $sectionName == 'sidebar-setting') ? 'active' : '' }}"
        href="{{ route('settings.edit', ['section' => 'sidebar-setting']) }}">
         {{ __('messages.sidebar_setting') }}
     </a>
-</li>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0  {{ (Request::is('settings*', 'currency-settings*','hospital-schedules')) ? '' : 'd-none' }} ">
+</li>--}}
+{{--<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0  {{ (Request::is('settings*', 'currency-settings*','hospital-schedules')) ? '' : 'd-none' }} ">
     <a class="nav-link p-0 {{ Request::is('currency-settings*') ? 'active' : '' }}"
        href="{{ route('currency-settings.index') }}">
         {{ __('messages.currency_setting') }}
     </a>
-</li>
+</li>--}}
 @role('Admin')
 <li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('front-settings*','notice-boards*','testimonials*', 'front-cms-services*','terms-and-conditions*')) ? 'd-none' : '' }}">
     <a class="nav-link p-0  {{ Request::is('front-settings*') ? 'active' : ''  }}"

@@ -27,7 +27,7 @@
             {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light patientBirthDate form-control' : 'bg-white patientBirthDate form-control'), 'id' => 'patientBirthDate', 'autocomplete' => 'off', 'tabindex' => '4']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    {{--<div class="col-md-6">
         <div class="form-group mobile-overlapping  mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <span class="required"></span><br>
@@ -36,7 +36,7 @@
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('gender', __('messages.user.gender').':', ['class' => 'form-label']) }}
@@ -134,7 +134,7 @@
     </div>
 </div>
 <hr>
-<div class="row mt-3 mb-5">
+{{--<div class="row mt-3 mb-5">
     <div class="col-md-12 mb-3">
         <h5>{{ __('messages.setting.social_details') }}</h5>
     </div>
@@ -163,7 +163,7 @@
         {{ Form::text('linkedIn_url', null, ['class' => 'form-control patientLinkedInUrl','id'=>'patientLinkedInUrl', 'onkeypress' => 'return avoidSpace(event);']) }}
     </div>
 
-</div>
+</div>--}}
 <div class="d-flex justify-content-end">
     {{ Form::submit(__('messages.common.save'), ['class' => 'btn btn-primary me-2','id' => 'patientSave']) }}
     <a href="{{ route('patients.index') }}"

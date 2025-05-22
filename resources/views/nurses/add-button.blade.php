@@ -8,9 +8,9 @@
             <a href="{{ route('nurses.create') }}"
                class="dropdown-item  px-5">{{ __('messages.nurse.new_nurse') }}</a>
         </li>
-        <li>
+        {{--<li>
             <a href="{{ route('nurses.excel') }}" data-turbo="false"
                class="dropdown-item  px-5">{{ __('messages.common.export_to_excel') }}</a>
-        </li>
+        </li>--}}
     </ul>
 </div>

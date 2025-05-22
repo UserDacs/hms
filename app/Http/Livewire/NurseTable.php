@@ -63,10 +63,10 @@ class NurseTable extends LivewireTableComponent
                 ->view('nurses.columns.nurses')
                 ->searchable()
                 ->sortable(),
-            Column::make(__('messages.user.phone'), 'user.phone')
-                ->view('nurses.columns.phone')
-                ->searchable()
-                ->sortable(),
+            // Column::make(__('messages.user.phone'), 'user.phone')
+            //     ->view('nurses.columns.phone')
+            //     ->searchable()
+            //     ->sortable(),
             Column::make(__('messages.user.qualification'), 'user.qualification')
                 ->view('nurses.columns.qualification')
                 ->searchable()

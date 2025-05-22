@@ -9,10 +9,10 @@
             <a href="{{ route('medicines.create') }}"
                class="dropdown-item  px-5">{{ __('messages.medicine.new_medicine') }}</a>
         </li>
-        <li>
+        {{--<li>
             <a href="{{ route('medicines.excel') }}" data-turbo="false"
                class="dropdown-item  px-5">{{ __('messages.common.export_to_excel') }}</a>
-        </li>
+        </li>--}}
     </ul>
     @else
         <a href="{{ route('medicines.create') }}"
