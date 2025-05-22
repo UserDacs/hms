@@ -19,13 +19,13 @@
         <span class="required"></span>
         {{ Form::select('doctor_department_id', $doctorsDepartments, null, ['class' => 'form-select', 'id' => 'doctorsDepartmentId', 'placeholder' => 'Select Department', 'data-control' => 'select2','required']) }}
     </div>
-    {{--<div class="col-md-6">
+    <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('email',__('messages.user.email').(':'), ['class' => 'form-label']) }}
             <span class="required"></span>
             {{ Form::email('email', null, ['class' => 'form-control','required','id'=>'createAccountantEmail']) }}
         </div>
-    </div>--}}
+    </div>
     <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('designation', __('messages.user.designation').':', ['class' => 'form-label']) }}
@@ -33,16 +33,16 @@
             {{ Form::text('designation', null, ['class' => 'form-control', 'required']) }}
         </div>
     </div>
-    {{--<div class="col-md-6">
+    <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('phone',__('messages.user.phone').(':'), ['class' => 'form-label']) }}
             <br>
-            {{ Form::tel('phone', getCountryCode(), ['class' => 'form-control phoneNumber','id' => 'phoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
+            {{ Form::tel('phone', '9051234567', ['class' => 'form-control phoneNumber','id' => 'phoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
             {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>--}}
+    </div>
     <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('qualification', __('messages.user.qualification').':', ['class' => 'form-label']) }}

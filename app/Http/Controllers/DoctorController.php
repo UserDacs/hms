@@ -76,8 +76,11 @@ class DoctorController extends AppBaseController
      */
     public function store(CreateDoctorRequest $request)
     {
+        $request->input('specialist', '000');
         $input = $request->all();
+        
         $input['status'] = isset($input['status']) ? 1 : 0;
+        $input['specialist'] = "00";
         $doctor = $this->doctorRepository->store($input);
         Flash::success(__('messages.case.doctor').' '.__('messages.common.saved_successfully'));
 

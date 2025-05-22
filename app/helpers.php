@@ -649,7 +649,14 @@ function divider($numberOfDigits)
  */
 function preparePhoneNumber($input, $key)
 {
-    return (! empty($input[$key])) ? '+'.$input['prefix_code'].$input[$key] : null;
+    if (empty($input[$key]) || empty($input['prefix_code'])) {
+        return null; 
+    }
+
+    $prefix = preg_replace('/\D/', '', $input['prefix_code']);
+    $phone = preg_replace('/\D/', '', $input[$key]);
+
+    return '+' . $prefix . $phone;
 }
 
 /**

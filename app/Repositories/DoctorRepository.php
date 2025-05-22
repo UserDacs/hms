@@ -9,6 +9,7 @@ use App\Models\User;
 use Arr;
 use Exception;
 use Hash;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 /**
@@ -49,37 +50,67 @@ class DoctorRepository extends BaseRepository
      * @param bool $mail
      * @return bool
      */
-    public function store($input, $mail = true)
+    public function store($input, $mail = false)
     {
         try {
+            Log::info('Incoming Doctor Input:', $input);
+        
+            // Ensure phone exists
+            if (!isset($input['phone'])) {
+                Log::info('Phone input is missing');
+            }
+        
             $input['phone'] = preparePhoneNumber($input, 'phone');
-            $input['department_id'] = Department::whereName('Doctor')->first()->id;
+        
+            $department = Department::whereName('Doctor')->first();
+            if (!$department) {
+                throw new Exception('Doctor department not found.');
+            }
+            $input['department_id'] = $department->id;
+        
+            if (!isset($input['password'])) {
+                throw new Exception('Password field is missing.');
+            }
+        
             $input['password'] = Hash::make($input['password']);
             $input['dob'] = (!empty($input['dob'])) ? $input['dob'] : null;
+        
             $user = User::create(Arr::except($input, ['specialist', 'doctor_department_id']));
+        
             if ($mail) {
                 $user->sendEmailVerificationNotification();
             }
-
+        
             if (isset($input['image']) && !empty($input['image'])) {
                 $mediaId = storeProfileImage($user, $input['image']);
             }
-
+        
+            if (empty($input['doctor_department_id']) || empty($input['specialist'])) {
+                throw new Exception('Doctor department or specialist is missing.');
+            }
+        
             $doctor = Doctor::create([
                 'user_id'              => $user->id,
                 'doctor_department_id' => $input['doctor_department_id'],
                 'specialist'           => $input['specialist'],
             ]);
+
+        
             $ownerId = $doctor->id;
             $ownerType = Doctor::class;
 
+        
             if (!empty($address = Address::prepareAddressArray($input))) {
                 Address::create(array_merge($address, ['owner_id' => $ownerId, 'owner_type' => $ownerType]));
             }
-
+        
             $user->update(['owner_id' => $ownerId, 'owner_type' => $ownerType]);
             $user->assignRole($input['department_id']);
+
+            
+        
         } catch (Exception $e) {
+            Log::info('Doctor creation failed: ' . $e->getMessage());
             throw new UnprocessableEntityHttpException($e->getMessage());
         }
 

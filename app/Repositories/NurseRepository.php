@@ -53,7 +53,7 @@ class NurseRepository extends BaseRepository
      * @param  bool  $mail
      * @return bool
      */
-    public function store($input, $mail = true)
+    public function store($input, $mail = false)
     {
         try {
             $input['department_id'] = Department::whereName('Nurse')->first()->id;

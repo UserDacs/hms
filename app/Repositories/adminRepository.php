@@ -43,7 +43,7 @@ class adminRepository extends BaseRepository
         return User::class;
     }
 
-    public function store($input, $mail = true)
+    public function store($input, $mail = false)
     {
         try {
             $input['department_id'] = Department::whereName('Admin')->first()->id;
