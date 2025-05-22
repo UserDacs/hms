@@ -33,7 +33,7 @@
             {{ Form::text('designation', null, ['class' => 'form-control', 'required']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" style="display:none">
         <div class="form-group mobile-overlapping mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <br>
@@ -57,7 +57,7 @@
             {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light birthDate form-control' : 'bg-white birthDate form-control'),'id' => 'editDoctorBirthDate','autocomplete' => 'off']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" style="display:none">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'editDoctorBloodGroup', 'placeholder' => 'Select Blood Group', 'data-control' => 'select2']) }}

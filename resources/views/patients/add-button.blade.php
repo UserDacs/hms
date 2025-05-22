@@ -8,10 +8,10 @@
             <a href="{{ route('patients.create') }}"
                class="dropdown-item  px-5">{{ __('messages.patient.new_patient') }}</a>
         </li>
-        <li>
+        <!-- <li>
             <a href="{{ route('patient.excel') }}"
                class="dropdown-item  px-5" target="_blank"  data-tirbo='false'>{{ __('messages.common.export_to_excel') }}</a>
-        </li>
+        </li> -->
     </ul>
 </div>
 

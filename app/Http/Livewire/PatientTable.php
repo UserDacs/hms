@@ -61,10 +61,10 @@ class PatientTable extends LivewireTableComponent
         return [
             Column::make(__('messages.patients'), 'patientUser.first_name')->view('patients.columns.patient')
                 ->sortable()->searchable(),
-            Column::make(__('messages.user.phone'), 'patientUser.phone')->view('patients.columns.phone')
-                ->sortable()->searchable(),
-            Column::make(__('messages.user.blood_group'), 'patientUser.blood_group')->view('patients.columns.blood_group')
-                ->sortable()->searchable(),
+            // Column::make(__('messages.user.phone'), 'patientUser.phone')->view('patients.columns.phone')
+            //     ->sortable()->searchable(),
+            // Column::make(__('messages.user.blood_group'), 'patientUser.blood_group')->view('patients.columns.blood_group')
+            //     ->sortable()->searchable(),
             Column::make(__('messages.common.status'), 'patientUser.status')->view('patients.columns.status'),
             Column::make(__('messages.common.action'), 'id')->view('patients.action'),
         ];

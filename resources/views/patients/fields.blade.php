@@ -103,7 +103,7 @@
         </div>
     </div>
 </div>
-<hr>
+<!-- <hr> -->
 <div class="row mt-3 mb-5">
     <div class="col-md-12 mb-3">
         <h5>{{ __('messages.user.address_details') }}</h5>

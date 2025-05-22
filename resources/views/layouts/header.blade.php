@@ -17,7 +17,7 @@
         </div>
     </nav>
     <ul class="nav align-items-center flex-nowrap">
-        <li class="px-xxl-3 px-2">
+        <li class="px-xxl-3 px-2" style="display:none;">
             <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="hover"
                  title=""
                  data-bs-original-title="{{ getLoggedInUser()->thememode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}">
@@ -26,7 +26,7 @@
                 </a>
             </div>
         </li>
-        <li class="px-sm-3 px-2">
+        <li class="px-sm-3 px-2" style="display:none;">
             <div class="dropdown custom-dropdown d-flex align-items-center py-4">
                 <button class="btn hide-arrow p-0 position-relative" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -117,7 +117,7 @@
                                 {{ __('messages.user.change_password') }}
                             </a>
                         </li>
-                        <li>
+                        <li style="display:none;>
                             <a class="dropdown-item text-gray-900" href="javascript:void(0)"
                                data-id="{{ getLoggedInUserId() }}"
                                data-bs-toggle="modal"

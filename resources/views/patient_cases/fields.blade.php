@@ -15,7 +15,7 @@
         <span class="required"></span>
         {{ Form::text('date', null, ['id'=>'caseDate','class' => (getLoggedInUser()->thememode ? 'bg-light form-control' : 'bg-white form-control'),'required', 'autocomplete' => 'off']) }}
     </div>
-    <div class="form-group col-md-6 mb-5">
+    <div class="form-group col-md-6 mb-5" style="display:none">
         {{ Form::label('phone', __('messages.case.phone').':', ['class' => 'form-label']) }}
         <br>
         {!! Form::tel('phone', isset($patientCase) ? ($patientCase->phone ?? getCountryCode()) : getCountryCode(), ['class' => 'form-control iti phoneNumber','id' => 'casePhoneNumber']) !!}
@@ -31,7 +31,7 @@
                    type="checkbox" {{(!isset($patientCase))? 'checked': (($patientCase->status) ? 'checked' : '')}}>
         </div>
     </div>
-    <div class="form-group col-sm-6 mb-5">
+    <div class="form-group col-sm-6 mb-5" style="display:none">
         {{ Form::label('fee', __('messages.case.fee').(':'), ['class' => 'form-label']) }}
         <span class="required"></span>
         {{ Form::text('fee', null, ['class' => 'form-control price-input price','required']) }}

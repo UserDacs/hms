@@ -234,14 +234,14 @@
 @endmodule
 @endrole
 @role('Admin|Receptionist|Doctor|Case Manager')
-@module('Patient Admissions',$modules)
+{{--@module('Patient Admissions',$modules)
 <li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('patients*','patient-cases*','case-handlers*','patient-admissions*')) ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('patient-admissions**') ? 'active' : '' }}"
        href="{{ route('patient-admissions.index') }}">
         {{ __('messages.patient_admissions') }}
     </a>
 </li>
-@endmodule
+@endmodule--}}
 @endrole
 @role('Case Manager|Pharmacist|Lab Technician')
 @module('Doctors',$modules)
@@ -744,12 +744,12 @@
         {{ __('messages.general') }}
     </a>
 </li>
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (Request::is('settings*', 'currency-settings*', 'hospital-schedules')) ? '' : 'd-none' }}">
+{{--<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (Request::is('settings*', 'currency-settings*', 'hospital-schedules')) ? '' : 'd-none' }}">
     <a class="nav-link p-0 {{ Request::is('hospital-schedules*') ? 'active' : ''  }}"
        href="{{ route('hospital-schedules.index') }}">
         {{ __('messages.hospital_schedule') }}
     </a>
-</li>
+</li>--}}
 {{--<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0  {{ (Request::is('settings*', 'currency-settings*', 'hospital-schedules')) ? '' : 'd-none' }} ">
     <a class="nav-link p-0 {{ (isset($sectionName) && $sectionName == 'sidebar-setting') ? 'active' : '' }}"
        href="{{ route('settings.edit', ['section' => 'sidebar-setting']) }}">
