@@ -33,7 +33,7 @@
             {{ Form::text('designation', null, ['class' => 'form-control', 'required']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" style="display:none">
         <div class="form-group mb-5">
             {{ Form::label('phone',__('messages.user.phone').(':'), ['class' => 'form-label']) }}
             <br>

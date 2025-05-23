@@ -31,7 +31,7 @@
                    type="checkbox" {{(!isset($patientCase))? 'checked': (($patientCase->status) ? 'checked' : '')}}>
         </div>
     </div>
-    <div class="form-group col-sm-6 mb-5">
+    <div class="form-group col-sm-6 mb-5" style="display:none">
         {{ Form::label('fee', __('messages.case.fee').(':'), ['class' => 'form-label']) }}
         <span class="required"></span>
         {{ Form::text('fee', null, ['class' => 'form-control price-input price','required']) }}
