@@ -15,7 +15,7 @@
                     <div class="form-group col-sm-6 mb-5">
                         {{ Form::label('patient_id', __('messages.vaccinated_patient.patient').(':'),['class' => 'form-label']) }}
                         <span class="required"></span>
-                        {{ Form::select('patient_id', $patients, null, ['class' => 'form-control', 'required','id'=>'editVPatientName','placeholder' => 'Select Patient','data-control'=> 'select2']) }}
+                        {{ Form::select('patient_id', $patients, null, ['class' => 'form-control', 'required','id'=>'editVPatientName','placeholder' => 'Select Recipient','data-control'=> 'select2']) }}
                     </div>
                     <div class="form-group col-sm-6 mb-5">
                         {{ Form::label('vaccination_id', __('messages.vaccinated_patient.vaccine').(':'),['class' => 'form-label']) }}

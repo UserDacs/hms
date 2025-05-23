@@ -31,7 +31,7 @@
         <div class="form-group mobile-overlapping  mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <span class="required"></span><br>
-            {{ Form::tel('phone', $patient->patientUser->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber', 'id' => 'editPatientPhoneNumber', 'required', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")', 'tabindex' => '5']) }}
+            {{ Form::tel('phone', $patient->patientUser->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber', 'id' => 'editPatientPhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")', 'tabindex' => '5']) }}
             {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
             {{ Form::hidden('country_iso',null,['class'=>'country_iso']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>

@@ -67,8 +67,8 @@ class UserTable extends LivewireTableComponent
         return [
             Column::make(__('messages.users'), 'first_name')->view('users.templates.columns.user')
                 ->sortable()->searchable(),
-            Column::make(__('messages.employee_payroll.role'), 'department.name')->view('users.templates.columns.role')
-                ->sortable()->searchable(),
+            // Column::make(__('messages.employee_payroll.role'), 'department.name')->view('users.templates.columns.role')
+            //     ->sortable()->searchable(),
             // Column::make(__('messages.user.email'), 'department_id')->view('users.templates.columns.email_verified'),
             Column::make(__('messages.common.status'), 'first_name')->view('users.templates.columns.status'),
             Column::make(__('messages.common.action'), 'id')->view('users.templates.action-button'),

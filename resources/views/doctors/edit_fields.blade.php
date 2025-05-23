@@ -33,13 +33,13 @@
             {{ Form::text('designation', null, ['class' => 'form-control', 'required']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 d-none">
         <div class="form-group mobile-overlapping mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <br>
             {{ Form::tel('phone', $user->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber', 'id' => 'editDoctorPhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
-            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
-            {{ Form::hidden('country_iso',null,['class'=>'country_iso']) }}
+            {{ Form::hidden('prefix_code','null',['class'=>'prefix_code']) }}
+            {{ Form::hidden('country_iso','null',['class'=>'country_iso']) }}
             <span id="valid-msg" class="text-success d-none fw-400 fs-small mt-2 valid-msg">✓ &nbsp; {{__('messages.valid')}}</span>
             <span id="error-msg" class="text-danger d-none fw-400 fs-small mt-2 error-msg"></span>
         </div>

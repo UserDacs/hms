@@ -353,7 +353,7 @@ $patientCaseMgt = getMenuLinks(\App\Models\User::MAIN_PATIENT_CASE)
             <span class="aside-menu-icon pe-3 pe-3">
                 <i class="fas fa-user-injured"></i>
             </span>
-            <span class="aside-menu-title">{{ __('Recipients') }}</span>
+            <span class="aside-menu-title">{{ __('messages.patients') }}</span>
             <span class="d-none">{{__('messages.cases')}}</span>
             <span class="d-none">{{__('messages.case_handlers')}}</span>
             <span class="d-none">{{__('messages.patient_admissions')}}</span>

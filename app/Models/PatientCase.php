@@ -120,7 +120,7 @@ class PatientCase extends Model
         'doctor_id' => 'required',
         'date' => 'required',
         'description' => 'nullable',
-        'fee' => 'required',
+        'fee' => 'nullable',
     ];
 
     /**

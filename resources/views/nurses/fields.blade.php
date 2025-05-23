@@ -60,6 +60,15 @@
             </div>
         </div>
     </div>
+    <div class="col-md-3">
+        <div class="form-group mb-5">
+            {{ Form::label('status', __('messages.common.status').':', ['class' => 'form-label']) }}
+            <br>
+            <div class="form-check form-switch ">
+                <input class="form-check-input w-35px h-20px is-active" name="status" type="checkbox" value="1" checked>
+            </div>
+        </div>
+    </div>
     <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('qualification', __('messages.user.qualification').':', ['class' => 'form-label']) }}
@@ -85,15 +94,6 @@
             {{ Form::label('password_confirmation', __('messages.user.password_confirmation').':', ['class' => 'form-label']) }}
             <span class="required"></span>
             {{ Form::password('password_confirmation', ['class' => 'form-control','min' => '6','max' => '10']) }}
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="form-group mb-5">
-            {{ Form::label('status', __('messages.common.status').':', ['class' => 'form-label']) }}
-            <br>
-            <div class="form-check form-switch ">
-                <input class="form-check-input w-35px h-20px is-active" name="status" type="checkbox" value="1" checked>
-            </div>
         </div>
     </div>
     <div class="form-group col-md-4 mb-5">

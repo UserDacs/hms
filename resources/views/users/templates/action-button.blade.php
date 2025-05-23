@@ -1,5 +1,5 @@
 <a  href="{{route('users.edit',$row->id)}}" title="{{ __('messages.common.edit')}} "
-    class="btn px-1 text-primary fs-3 user-edit-btn" data-id="{{$row->id}}">
+    class="btn px-1 text-primary fs-3 user-edit-btn d-none" data-id="{{$row->id}}">
     <i class="fa-solid fa-pen-to-square"></i>
 </a>
 

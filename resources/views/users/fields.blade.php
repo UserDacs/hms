@@ -15,10 +15,10 @@
         {{ Form::email('email', null, ['class' => 'form-control', 'required', 'tabindex' => '3','id'=>'userEmail']) }}
     </div>
     @if(!$isEdit)
-        <div class="col-lg-6 mb-5">
+        <div class="col-lg-6 mb-5 d-none">
             {{ Form::label('department_id',__('messages.employee_payroll.role').':', ['class' => 'form-label']) }}
             <span class="text-danger">*</span>
-            {{ Form::select('department_id', $role, null, ['class' => 'form-select fw-bold', 'required', 'id' => 'userRole', 'placeholder' => 'Select Role', 'data-control' => 'select2']) }}
+            {{ Form::select('department_id', $role, 'null', ['class' => 'form-select fw-bold', 'id' => 'userRole', 'placeholder' => 'Select Role', 'data-control' => 'select2']) }}
         </div>
     @endif
     {{--<div class="col-md-6">
@@ -37,7 +37,19 @@
         {{ Form::label('dob',__('messages.user.dob').':', ['class' => 'form-label']) }}
         {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light form-control' : 'bg-white form-control'), 'id' => 'userDob', 'autocomplete' => 'off', 'tabindex' => '10']) }}
     </div>
-    <div class="col-md-3">
+    @if(!$isEdit)
+        <div class="col-lg-6 mb-5">
+            {{ Form::label('password', __('messages.user.password').':', ['class' => 'form-label required']) }}
+            {{ Form::password('password', ['class' => 'form-control', 'required','min' => '6','max' => '10', 'tabindex' => '8']) }}
+        </div>
+    @endif
+    @if(!$isEdit)
+        <div class="col-lg-6 mb-5">
+            {{ Form::label('password_confirmation', __('messages.user.password_confirmation').':', ['class' => 'form-label required mb-3']) }}
+            {{ Form::password('password_confirmation', ['class' => 'form-control','required','min' => '6','max' => '10', 'tabindex' => '9']) }}
+        </div>
+    @endif
+    <div class="col-md-4">
         <div class="form-group mb-5">
             {{ Form::label('gender',__('messages.user.gender').(':'), ['class' => 'form-label']) }}
             <span class="required"></span> &nbsp;<br>
@@ -53,7 +65,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="form-group mb-5">
             {{ Form::label('status',__('messages.common.status').(':'), ['class' => 'form-label']) }}
             <br>
@@ -65,18 +77,6 @@
             </div>
         </div>
     </div>
-    @if(!$isEdit)
-        <div class="col-lg-6 mb-5">
-            {{ Form::label('password', __('messages.user.password').':', ['class' => 'form-label required']) }}
-            {{ Form::password('password', ['class' => 'form-control', 'required','min' => '6','max' => '10', 'tabindex' => '8']) }}
-        </div>
-    @endif
-    @if(!$isEdit)
-        <div class="col-lg-6 mb-5">
-            {{ Form::label('password_confirmation', __('messages.user.password_confirmation').':', ['class' => 'form-label required mb-3']) }}
-            {{ Form::password('password_confirmation', ['class' => 'form-control','required','min' => '6','max' => '10', 'tabindex' => '9']) }}
-        </div>
-@endif
 <!-- Facebook URL Field -->
     {{--<div class="col-lg-6 mb-5">
         {{ Form::label('facebook_url', __('messages.facebook_url').':', ['class' => 'form-label']) }}

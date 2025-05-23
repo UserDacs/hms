@@ -215,7 +215,7 @@
 @endrole
 @role('Admin|Receptionist|Case Manager')
 @module('Cases',$modules)
-<li class="d-none nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('patients*','patient-cases*','case-handlers*','patient-admissions*')) ? 'd-none' : '' }}">
+<li class=" nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('patients*','patient-cases*','case-handlers*','patient-admissions*')) ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('patient-cases*') ? 'active' : '' }}"
        href="{{ route('patient-cases.index') }}">
         {{ __('messages.cases') }}
@@ -357,7 +357,7 @@
 @endrole
 @role('Admin')
 @module('Schedules',$modules)
-<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('doctors*','doctor-departments*','schedules*','prescriptions*')) ? 'd-none' : '' }}">
+<li class="d-none nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ (!Request::is('doctors*','doctor-departments*','schedules*','prescriptions*')) ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('schedules*') ? 'active' : '' }}"
        href="{{ route('schedules.index') }}">
         {{ __('messages.schedules') }}
