@@ -81,7 +81,7 @@ class PatientCaseController extends AppBaseController
             return redirect()->back()->withInput($input);
         }
 
-        $input['fee'] = removeCommaFromNumbers($input['fee']);
+        // $input['fee'] = removeCommaFromNumbers($input['fee']);
         $input['status'] = isset($input['status']) ? 1 : 0;
         $input['phone'] = preparePhoneNumber($input, 'phone');
 
@@ -136,7 +136,7 @@ class PatientCaseController extends AppBaseController
 
             return redirect()->back()->withInput($input);
         }
-        $input['fee'] = removeCommaFromNumbers($input['fee']);
+        // $input['fee'] = removeCommaFromNumbers($input['fee']);
         $input['status'] = isset($input['status']) ? 1 : 0;
         $input['phone'] = preparePhoneNumber($input, 'phone');
 

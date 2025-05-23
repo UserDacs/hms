@@ -95,8 +95,8 @@ class Patient extends Model
     public static $rules = [
         'first_name' => 'required|string',
         'last_name' => 'required|string',
-        'email' => 'required|email:filter|unique:users,email',
-        'password' => 'nullable|same:password_confirmation|min:6',
+        // 'email' => 'required|email:filter|unique:users,email',
+        // 'password' => 'nullable|same:password_confirmation|min:6',
         'gender' => 'required',
         'dob' => 'nullable|date',
         'phone' => 'nullable|numeric',

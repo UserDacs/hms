@@ -62,10 +62,10 @@ class DoctorController extends AppBaseController
     public function create()
     {
         $doctorsDepartments = getDoctorsDepartments();
-        // $bloodGroup = getBloodGroups();
+        $bloodGroup = getBloodGroups();
 
-        // return view('doctors.create', compact('doctorsDepartments', 'bloodGroup'));
-        return view('doctors.create', compact('doctorsDepartments'));
+        return view('doctors.create', compact('doctorsDepartments', 'bloodGroup'));
+        // return view('doctors.create', compact('doctorsDepartments'));
     }
 
     /**

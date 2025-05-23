@@ -21,7 +21,7 @@
             {{ Form::email('email', null, ['class' => 'form-control','required','id'=>'createAdminEmail']) }}
         </div>
     </div>
-    {{--<div class="col-md-6">
+    <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('phone',__('messages.user.phone').(':'), ['class' => 'form-label']) }}
             <br>
@@ -30,7 +30,7 @@
             <span class="valid-msg text-success d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="error-msg text-danger d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>--}}
+    </div>
     <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('dob', __('messages.user.dob').':', ['class' => 'form-label']) }}

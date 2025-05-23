@@ -33,12 +33,12 @@
             {{ Form::text('designation', null, ['class' => 'form-control', 'required']) }}
         </div>
     </div>
-    <div class="col-md-6" style="display:none">
+    <div class="col-md-6 d-none">
         <div class="form-group mb-5">
             {{ Form::label('phone',__('messages.user.phone').(':'), ['class' => 'form-label']) }}
             <br>
             {{ Form::tel('phone', '9051234567', ['class' => 'form-control phoneNumber','id' => 'phoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
-            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
+            {{ Form::hidden('prefix_code','asdsa',['class'=>'prefix_code']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
@@ -56,12 +56,12 @@
             {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light form-control' : 'bg-white form-control'),'id' => 'doctorBirthDate','autocomplete' => 'off']) }}
         </div>
     </div>
-    {{--<div class="col-md-6">
+    <div class="col-md-6 d-none">
         <div class="form-group mb-5">
             {{ Form::label('blood_group',__('messages.user.blood_group').(':'), ['class' => 'form-label']) }}
-            {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'doctorBloodGroup','placeholder'=>'Select Blood Group', ]) }}
+            {{ Form::select('blood_group', $bloodGroup, 'adass', ['class' => 'form-select', 'id' => 'doctorBloodGroup','placeholder'=>'Select Blood Group', ]) }}
         </div>
-    </div>--}}
+    </div>
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('gender',__('messages.user.gender').(':'), ['class' => 'form-label']) }}

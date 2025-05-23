@@ -20,7 +20,7 @@
                                 {{ \Illuminate\Support\Str::limit($frontSetting['home_page_description'], 170) }}</p>
                             @if(!Auth::user())
                                 <a href="{{ route('register') }}"
-                                   class="btn btn-primary" data-turbo="false">{{ __('messages.web_home.sign_up') }}</a>
+                                   class="btn btn-primary" data-turbo="false" style="display:none">{{ __('messages.web_home.sign_up') }}</a>
                             @endif
                         </div>
                     </div>

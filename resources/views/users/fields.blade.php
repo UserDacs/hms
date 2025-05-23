@@ -21,18 +21,18 @@
             {{ Form::select('department_id', $role, null, ['class' => 'form-select fw-bold', 'required', 'id' => 'userRole', 'placeholder' => 'Select Role', 'data-control' => 'select2']) }}
         </div>
     @endif
-    {{--<div class="col-md-6">
+    <div class="col-md-6 d-none">
         <div class="form-group mb-5">
             {{ Form::label('phone',__('messages.visitor.phone').(':'), ['class' => 'form-label']) }}
             <span class=""></span>
             <br>
             {{ Form::tel('phone', $user->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber','id' => 'userPhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")', 'tabindex' => '5']) }}
-            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
-            {{ Form::hidden('country_iso',null,['class'=>'country_iso']) }}
+            {{ Form::hidden('prefix_code','null',['class'=>'prefix_code']) }}
+            {{ Form::hidden('country_iso','null',['class'=>'country_iso']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>--}}
+    </div>
     <div class="col-lg-6 mb-5">
         {{ Form::label('dob',__('messages.user.dob').':', ['class' => 'form-label']) }}
         {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light form-control' : 'bg-white form-control'), 'id' => 'userDob', 'autocomplete' => 'off', 'tabindex' => '10']) }}

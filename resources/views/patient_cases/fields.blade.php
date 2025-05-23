@@ -31,11 +31,11 @@
                    type="checkbox" {{(!isset($patientCase))? 'checked': (($patientCase->status) ? 'checked' : '')}}>
         </div>
     </div>
-    <div class="form-group col-sm-6 mb-5" style="display:none">
+    {{--<div class="form-group col-sm-6 mb-5">
         {{ Form::label('fee', __('messages.case.fee').(':'), ['class' => 'form-label']) }}
         <span class="required"></span>
         {{ Form::text('fee', null, ['class' => 'form-control price-input price','required']) }}
-    </div>
+    </div>--}}
     <div class="form-group col-sm-6 mb-5">
         {{ Form::label('description', __('messages.common.description').':', ['class' => 'form-label']) }}
         {{ Form::textarea('description', null, ['class' => 'form-control', 'rows' => 4]) }}
