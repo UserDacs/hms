@@ -1234,7 +1234,7 @@ Route::middleware('auth', 'verified', 'xss', 'checkUserStatus')->group(function 
     });
 });
 
-Route::get('hms-logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+// Route::get('hms-logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 
 Route::get('qr-scan', function () {
     return view('qr');
