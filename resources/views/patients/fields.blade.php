@@ -14,7 +14,7 @@
             {{ Form::text('last_name', null, ['class' => 'form-control', 'required', 'tabindex' => '2']) }}
         </div>
     </div>
-    <div class="col-md-6 d-none">
+    <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('email', __('messages.user.email').':', ['class' => 'form-label']) }}
             <span class="required"></span>
@@ -27,16 +27,16 @@
             {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light patientBirthDate form-control' : 'bg-white patientBirthDate form-control'), 'id' => 'patientBirthDate', 'autocomplete' => 'off', 'tabindex' => '4']) }}
         </div>
     </div>
-    <div class="col-md-6 d-none">
+    {{--<div class="col-md-6">
         <div class="form-group mobile-overlapping  mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <span class="required"></span><br>
             {{ Form::tel('phone', getCountryCode(), ['class' => 'form-control phoneNumber', 'id' => 'patientPhoneNumber', 'required', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")', 'tabindex' => '5']) }}
-            {{ Form::hidden('prefix_code','null',['class'=>'prefix_code']) }}
+            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('gender', __('messages.user.gender').':', ['class' => 'form-label']) }}
@@ -59,19 +59,19 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6 d-none">
+    {{--<div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
-            {{ Form::select('blood_group', $bloodGroup, 'null', ['class' => 'form-select', 'id' => 'patientBloodGroup', 'placeholder' => 'Select Blood Group', 'data-control' => 'select2', 'tabindex' => "9"]) }}
+            {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'patientBloodGroup', 'placeholder' => 'Select Blood Group', 'data-control' => 'select2', 'tabindex' => "9"]) }}
         </div>
-    </div>
-    <div class="col-md-3 d-none">
+    </div>--}}
+    <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('password', __('messages.user.password').':', ['class' => 'form-label']) }}<span class="required"></span>
             {{ Form::password('password', ['class' => 'form-control','required','min' => '6','max' => '10', 'tabindex' => '10']) }}
         </div>
     </div>
-    <div class="col-md-3 d-none">
+    <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('password_confirmation', __('messages.user.password_confirmation').':', ['class' => 'form-label']) }}
             <span class="required"></span>

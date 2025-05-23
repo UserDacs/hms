@@ -23,8 +23,6 @@ use Spatie\MediaLibrary\Exceptions\FileCannotBeAdded\FileDoesNotExist;
 use Spatie\MediaLibrary\Exceptions\FileCannotBeAdded\FileIsTooBig;
 use Stripe\Stripe;
 
-use Illuminate\Support\Facades\Log;
-
 /**
  * @return int
  */
@@ -1077,9 +1075,6 @@ function getMenuLinks($menu)
         $defaultRoute = route('vaccinated-patients.index');
         $subMenus = ['Vaccinated Patients', 'Vaccinations'];
     }
-
-    Log::info($defaultRoute);
-    Log::info($subMenus);
 
     $allDisabled = \App\Models\Module::whereIn('name', $subMenus)
         ->where('is_active', true)

@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.343.17",
+            "version": "3.343.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "e14b2f6ede131ef79796ff814d87126578f90e9b"
+                "reference": "8bb5b542b28c4538b44de4335396e77bf9fbedf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/e14b2f6ede131ef79796ff814d87126578f90e9b",
-                "reference": "e14b2f6ede131ef79796ff814d87126578f90e9b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/8bb5b542b28c4538b44de4335396e77bf9fbedf6",
+                "reference": "8bb5b542b28c4538b44de4335396e77bf9fbedf6",
                 "shasum": ""
             },
             "require": {
@@ -153,9 +153,9 @@
             "support": {
                 "forum": "https://github.com/aws/aws-sdk-php/discussions",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.343.17"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.343.14"
             },
-            "time": "2025-05-22T18:03:05+00:00"
+            "time": "2025-05-19T18:02:45+00:00"
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -2040,16 +2040,16 @@
         },
         {
             "name": "imanghafoori/composer-json",
-            "version": "v2.0.2",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imanghafoori1/composer-json.git",
-                "reference": "b964d9fda8a5f456446bb12c192d03b14a2aaaeb"
+                "reference": "c914e596c024eac25642f5514386067ae067b498"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/composer-json/zipball/b964d9fda8a5f456446bb12c192d03b14a2aaaeb",
-                "reference": "b964d9fda8a5f456446bb12c192d03b14a2aaaeb",
+                "url": "https://api.github.com/repos/imanghafoori1/composer-json/zipball/c914e596c024eac25642f5514386067ae067b498",
+                "reference": "c914e596c024eac25642f5514386067ae067b498",
                 "shasum": ""
             },
             "require": {
@@ -2085,7 +2085,7 @@
             ],
             "support": {
                 "issues": "https://github.com/imanghafoori1/composer-json/issues",
-                "source": "https://github.com/imanghafoori1/composer-json/tree/v2.0.2"
+                "source": "https://github.com/imanghafoori1/composer-json/tree/v2.0.1"
             },
             "funding": [
                 {
@@ -2093,7 +2093,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-20T20:06:11+00:00"
+            "time": "2025-05-07T10:25:57+00:00"
         },
         {
             "name": "imanghafoori/laravel-microscope",

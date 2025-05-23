@@ -28,16 +28,16 @@
             {{ Form::text('designation', null, ['class' => 'form-control','required']) }}
         </div>
     </div>
-    <div class="col-md-6 d-none">
+    {{--<div class="col-md-6">
         <div class="form-group mobile-overlapping mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <br>
             {{ Form::tel('phone', getCountryCode(), ['class' => 'form-control phoneNumber','id' => 'nursePhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
-            {{ Form::hidden('prefix_code','null',['class'=>'prefix_code']) }}
+            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('gender', __('messages.user.gender').':', ['class' => 'form-label']) }}
@@ -76,12 +76,12 @@
             {{ Form::text('dob', null, ['id'=>'nurseBirthDate', 'class' => (getLoggedInUser()->thememode ? 'bg-light nurseBirthDate form-control' : 'bg-white nurseBirthDate form-control'),'autocomplete' => 'off']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    {{--<div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
-            {{ Form::select('blood_group', $bloodGroup, 'null', ['class' => 'form-select', 'id' => 'nurseBloodGroup','placeholder'=>'Select Blood Group']) }}
+            {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'nurseBloodGroup','placeholder'=>'Select Blood Group']) }}
         </div>
-    </div>
+    </div>--}}
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('password', __('messages.user.password').':', ['class' => 'form-label']) }}

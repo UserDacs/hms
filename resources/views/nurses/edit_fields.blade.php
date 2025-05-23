@@ -33,8 +33,8 @@
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <br>
             {{ Form::tel('phone', $nurse->user->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber','id' => 'editNursePhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
-            {{ Form::hidden('prefix_code','null',['class'=>'prefix_code']) }}
-            {{ Form::hidden('country_iso','null',['class'=>'country_iso']) }}
+            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
+            {{ Form::hidden('country_iso',null,['class'=>'country_iso']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
