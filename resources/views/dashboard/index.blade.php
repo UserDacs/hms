@@ -81,7 +81,7 @@
                         @endif
                         @if($modules['Doctors'] == true)
                             {{-- Doctors Widget --}}
-                            <div class="col-xxl-4 col-xl-4 col-sm-6 widget">
+                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('doctors.index') }}" class="text-decoration-none">
                                     <div class="bg-secondary shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-gray-600 widget-icon rounded-10 me-2 d-flex align-items-center justify-content-center">
@@ -97,7 +97,7 @@
                         @endif
                         @if($modules['Patients'] == true)
                             {{-- Patients Widget --}}
-                            <div class="col-xxl-4 col-xl-4 col-sm-6 widget">
+                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('patients.index') }}" class="text-decoration-none">
                                     <div class="bg-danger shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-red-300 widget-icon rounded-10 me-2 d-flex align-items-center justify-content-center">
@@ -113,7 +113,7 @@
                         @endif
                         @if($modules['Nurses'] == true)
                             {{-- Nurses Widget --}}
-                            <div class="col-xxl-4 col-xl-4 col-sm-6 widget">
+                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('nurses.index') }}" class="text-decoration-none">
                                     <div class="bg-secondary shadow-md rounded-10 p-xxl-10 px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-gray-700 widget-icon rounded-10 me-2  d-flex align-items-center justify-content-center">
@@ -129,7 +129,7 @@
                         @endif
                         @if($modules['Beds'] == true)
                             {{-- Avaiable Beds Widget --}}
-                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget" style="display:none">
+                            <div class="col-xxl-3 col-xl-4 col-sm-6 widget">
                                 <a href="{{ route('beds.index') }}" class="text-decoration-none">
                                     <div class="bg-primary shadow-md rounded-10 p-xxl-10 me-2  px-5 py-10 d-flex align-items-center justify-content-between my-sm-3 my-2">
                                         <div class="bg-cyan-700 widget-icon rounded-10 d-flex align-items-center justify-content-center">

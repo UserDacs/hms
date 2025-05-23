@@ -27,7 +27,7 @@
             {{ Form::text('dob', null, ['class' => (getLoggedInUser()->thememode ? 'bg-light patientBirthDate form-control' : 'bg-white patientBirthDate form-control'), 'id' => 'editPatientBirthDate', 'autocomplete' => 'off', 'tabindex' => '4']) }}
         </div>
     </div>
-    <div class="col-md-6" style="display:none">
+    <div class="col-md-6">
         <div class="form-group mobile-overlapping  mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <span class="required"></span><br>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6" style="display:none">
+    <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'editPatientBloodGroup', 'placeholder' => 'Select Blood Group', 'data-control' => 'select2', 'tabindex' => "9"]) }}
@@ -87,7 +87,7 @@
             </div>
         </div>
     </div>
-    <!-- <hr> -->
+    <hr>
     <div class="row mt-3 mb-5">
         <div class="col-md-12 mb-3">
             <h5>{{ __('messages.user.address_details') }}</h5>
@@ -118,7 +118,7 @@
         </div>
     </div>
     <hr>
-    <div class="row mt-3 mb-5" style="display:none">
+    <div class="row mt-3 mb-5">
         <div class="col-md-12 mb-3">
             <h5>{{ __('messages.setting.social_details') }}</h5>
         </div>

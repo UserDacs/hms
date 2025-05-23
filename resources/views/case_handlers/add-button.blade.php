@@ -8,9 +8,9 @@
             <a href="{{ route('case-handlers.create') }}"
                class="dropdown-item  px-5">{{ __('messages.case_handler.new_case_handler') }}</a>
         </li>
-        {{--<li>
+        <li>
             <a href="{{ route('case.handler.excel') }}"
                class="dropdown-item  px-5" data-turbo="false">{{ __('messages.common.export_to_excel') }}</a>
-        </li>--}}
+        </li>
     </ul>
 </div>

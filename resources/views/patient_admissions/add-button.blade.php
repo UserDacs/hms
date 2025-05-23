@@ -9,7 +9,7 @@
                class="dropdown-item  px-5">{{ __('messages.patient_admission.new_patient_admission') }}</a>
         </li>
         @if(Auth::user()->hasRole('Admin|Doctor|Case Manager|Receptionist'))
-            <li style="display:none;">
+            <li>
                 <a href="{{ route('patient.admissions.excel') }}"
                    data-turbo="false" class="dropdown-item  px-5">{{ __('messages.common.export_to_excel') }}</a>
             </li>
