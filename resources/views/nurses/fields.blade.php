@@ -38,6 +38,12 @@
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
         </div>
     </div>--}}
+    <div class="col-md-6">
+        <div class="form-group mb-5">
+            {{ Form::label('dob', __('messages.user.dob').':', ['class' => 'form-label']) }}
+            {{ Form::text('dob', null, ['id'=>'nurseBirthDate', 'class' => (getLoggedInUser()->thememode ? 'bg-light nurseBirthDate form-control' : 'bg-white nurseBirthDate form-control'),'autocomplete' => 'off']) }}
+        </div>
+    </div>
     <div class="col-md-3">
         <div class="form-group mb-5">
             {{ Form::label('gender', __('messages.user.gender').':', ['class' => 'form-label']) }}
@@ -54,26 +60,11 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="form-group mb-5">
-            {{ Form::label('status', __('messages.common.status').':', ['class' => 'form-label']) }}
-            <br>
-            <div class="form-check form-switch ">
-                <input class="form-check-input w-35px h-20px is-active" name="status" type="checkbox" value="1" checked>
-            </div>
-        </div>
-    </div>
     <div class="col-md-6">
         <div class="form-group mb-5">
             {{ Form::label('qualification', __('messages.user.qualification').':', ['class' => 'form-label']) }}
             <span class="required"></span>
             {{ Form::text('qualification', null, ['class' => 'form-control','required']) }}
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group mb-5">
-            {{ Form::label('dob', __('messages.user.dob').':', ['class' => 'form-label']) }}
-            {{ Form::text('dob', null, ['id'=>'nurseBirthDate', 'class' => (getLoggedInUser()->thememode ? 'bg-light nurseBirthDate form-control' : 'bg-white nurseBirthDate form-control'),'autocomplete' => 'off']) }}
         </div>
     </div>
     {{--<div class="col-md-6">
@@ -82,18 +73,27 @@
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'nurseBloodGroup','placeholder'=>'Select Blood Group']) }}
         </div>
     </div>--}}
-    <div class="col-md-3">
+    <div class="col-md-3 d-none">
         <div class="form-group mb-5">
             {{ Form::label('password', __('messages.user.password').':', ['class' => 'form-label']) }}
             <span class="required"></span>
-            {{ Form::password('password', ['class' => 'form-control','required','min' => '6','max' => '10']) }}
+            {{ Form::password('password', ['class' => 'form-control','min' => '6','max' => '10']) }}
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group mb-5 d-none">
+            {{ Form::label('password_confirmation', __('messages.user.password_confirmation').':', ['class' => 'form-label']) }}
+            <span class="required"></span>
+            {{ Form::password('password_confirmation', ['class' => 'form-control','min' => '6','max' => '10']) }}
         </div>
     </div>
     <div class="col-md-3">
         <div class="form-group mb-5">
-            {{ Form::label('password_confirmation', __('messages.user.password_confirmation').':', ['class' => 'form-label']) }}
-            <span class="required"></span>
-            {{ Form::password('password_confirmation', ['class' => 'form-control','required','min' => '6','max' => '10']) }}
+            {{ Form::label('status', __('messages.common.status').':', ['class' => 'form-label']) }}
+            <br>
+            <div class="form-check form-switch ">
+                <input class="form-check-input w-35px h-20px is-active" name="status" type="checkbox" value="1" checked>
+            </div>
         </div>
     </div>
     <div class="form-group col-md-4 mb-5">

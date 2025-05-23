@@ -68,9 +68,9 @@ class DoctorRepository extends BaseRepository
             }
             $input['department_id'] = $department->id;
         
-            if (!isset($input['password'])) {
-                throw new Exception('Password field is missing.');
-            }
+            // if (!isset($input['password'])) {
+            //     throw new Exception('Password field is missing.');
+            // }
         
             $input['password'] = Hash::make($input['password']);
             $input['dob'] = (!empty($input['dob'])) ? $input['dob'] : null;

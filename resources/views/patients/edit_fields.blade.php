@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 d-none">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'editPatientBloodGroup', 'placeholder' => 'Select Blood Group', 'data-control' => 'select2', 'tabindex' => "9"]) }}
@@ -118,7 +118,7 @@
         </div>
     </div>
     <hr>
-    <div class="row mt-3 mb-5">
+    <div class="row mt-3 mb-5 d-none">
         <div class="col-md-12 mb-3">
             <h5>{{ __('messages.setting.social_details') }}</h5>
         </div>

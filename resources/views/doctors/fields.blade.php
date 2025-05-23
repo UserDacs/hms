@@ -95,18 +95,18 @@
             {{ Form::text('specialist', (isset($doctor) ? $doctor->specialist : ''), ['class' => 'form-control','required']) }}
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 d-none">
         <div class="form-group mb-5">
             {{ Form::label('password',__('messages.user.password').(':'), ['class' => 'form-label']) }}
             <span class="required"></span>
-            {{ Form::password('password', ['class' => 'form-control','required','min' => '6','max' => '10']) }}
+            {{ Form::password('password', ['class' => 'form-control','min' => '6','max' => '10']) }}
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 d-none">
         <div class="form-group mb-5">
             {{ Form::label('password_confirmation',__('messages.user.password_confirmation').(':'), ['class' => 'form-label']) }}
             <span class="required"></span>
-            {{ Form::password('password_confirmation', ['class' => 'form-control','required','min' => '6','max' => '10']) }}
+            {{ Form::password('password_confirmation', ['class' => 'form-control','min' => '6','max' => '10']) }}
         </div>
     </div>
     <div class="form-group col-md-4 mb-5">

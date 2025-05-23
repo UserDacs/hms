@@ -12,7 +12,7 @@
         App::setLocale(session('languageName'));
     @endphp
 
-    <ul class="nav nav-pills" style="justify-content: flex-end; cursor: pointer">
+    <ul class="nav nav-pills d-none" style="justify-content: flex-end; cursor: pointer">
         <li class="nav-item dropdown">
             <a class="btn btn-primary w-150px mb-5 indicator m-3"
                data-bs-toggle="dropdown" href="javascript:void(0)" role="button"
@@ -57,7 +57,7 @@
                     <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required placeholder="{{__('auth.email')}}" value="{{ (Cookie::get('email') !== null) ? Cookie::get('email') : old('email') }}">
                 </div>
                 <div class="mb-sm-7 mb-4">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between d-none">
                         <label for="password" class="form-label">{{ __('auth.password') .':' }}<span
                                     class="required"></span></label>
                         <a href="{{ url('/password/reset') }}" class="link-info fs-6 text-decoration-none">
@@ -74,7 +74,7 @@
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary">{{__('auth.login.login')}}</button>
                 </div>
-                <div class="d-flex align-items-center mb-10 mt-4">
+                <div class="d-flex align-items-center mb-10 mt-4 d-none">
                     <span class="text-gray-700 me-2">{{__('auth.new_here')}}</span>
                     <a href="{{ route('register') }}" class="link-info fs-6 text-decoration-none">
                         {{__('auth.create_an_account')}}

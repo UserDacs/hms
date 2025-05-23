@@ -155,7 +155,7 @@
                                     {{ __('messages.web_menu.login') }}
                                 </a>
                             @endif
-                                <a href="{{ route('appointment') }}" class="btn btn-primary mb-3 mb-xl-0">
+                                <a href="{{ route('appointment') }}" class="btn btn-primary mb-3 mb-xl-0 d-none">
                                     {{ __('messages.web_home.book_appointment') }}    
                                 </a>
                         </div>

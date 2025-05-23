@@ -8,7 +8,7 @@
              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#add_vaccinated_patient_modal"
                 class="dropdown-item  px-5">{{__('messages.vaccinated_patient.new_vaccinate_patient')}}</a>
          </li>
-         <li>
+         <li class="d-none">
              <a href="{{ route('vaccinated-patients.excel') }}"
                 class="dropdown-item  px-5"
                 target="_blank">{{ __('messages.common.export_to_excel') }}</a>

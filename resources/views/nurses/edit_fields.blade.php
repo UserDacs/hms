@@ -28,15 +28,28 @@
             {{ Form::text('designation', null, ['class' => 'form-control','required']) }}
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 d-none">
         <div class="form-group mobile-overlapping mb-5">
             {{ Form::label('phone', __('messages.user.phone').':', ['class' => 'form-label']) }}
             <br>
             {{ Form::tel('phone', $nurse->user->phone ?? getCountryCode(), ['class' => 'form-control phoneNumber','id' => 'editNursePhoneNumber', 'onkeyup' => 'if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,"")']) }}
-            {{ Form::hidden('prefix_code',null,['class'=>'prefix_code']) }}
-            {{ Form::hidden('country_iso',null,['class'=>'country_iso']) }}
+            {{ Form::hidden('prefix_code','null',['class'=>'prefix_code']) }}
+            {{ Form::hidden('country_iso','null',['class'=>'country_iso']) }}
             <span class="text-success valid-msg d-none fw-400 fs-small mt-2">✓ &nbsp; {{__('messages.valid')}}</span>
             <span class="text-danger error-msg d-none fw-400 fs-small mt-2"></span>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group mb-5">
+            {{ Form::label('dob', __('messages.user.dob').':', ['class' => 'form-label']) }}
+            {{ Form::text('dob', null, ['id'=>'editNurseBirthDate', 'class' => (getLoggedInUser()->thememode ? 'bg-light nurseBirthDate form-control' : 'bg-white nurseBirthDate form-control'),'autocomplete' => 'off']) }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group mb-5">
+            {{ Form::label('qualification', __('messages.user.qualification').':', ['class' => 'form-label']) }}
+            <span class="required"></span>
+            {{ Form::text('qualification', null, ['class' => 'form-control','required']) }}
         </div>
     </div>
     <div class="col-md-3">
@@ -65,20 +78,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="form-group mb-5">
-            {{ Form::label('qualification', __('messages.user.qualification').':', ['class' => 'form-label']) }}
-            <span class="required"></span>
-            {{ Form::text('qualification', null, ['class' => 'form-control','required']) }}
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group mb-5">
-            {{ Form::label('dob', __('messages.user.dob').':', ['class' => 'form-label']) }}
-            {{ Form::text('dob', null, ['id'=>'editNurseBirthDate', 'class' => (getLoggedInUser()->thememode ? 'bg-light nurseBirthDate form-control' : 'bg-white nurseBirthDate form-control'),'autocomplete' => 'off']) }}
-        </div>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-6 d-none">
         <div class="form-group mb-5">
             {{ Form::label('blood_group', __('messages.user.blood_group').':', ['class' => 'form-label']) }}
             {{ Form::select('blood_group', $bloodGroup, null, ['class' => 'form-select', 'id' => 'editNurseBloodGroup','placeholder'=>'Select Blood Group']) }}

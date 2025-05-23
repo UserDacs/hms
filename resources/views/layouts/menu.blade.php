@@ -317,7 +317,7 @@ $liveConsultation = getMenuLinks(\App\Models\User::MAIN_LIVE_CONSULATION)
 $medicineMgt = getMenuLinks(\App\Models\User::MAIN_MEDICINES)
 ?>
 @if ($medicineMgt)
-    <li class="nav-item  {{ Request::is('categories*','brands*','medicines*') ? 'active' : '' }}">
+    <li class="nav-item d-none  {{ Request::is('categories*','brands*','medicines*') ? 'active' : '' }}">
         <a class="nav-link  d-flex align-items-center py-3"
            href="{{ $medicineMgt }}">
                                                                                                     <span class="aside-menu-icon pe-3 pe-3"><i
